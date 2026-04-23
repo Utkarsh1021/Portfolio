@@ -189,7 +189,7 @@ const Home = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl relative z-20 glass">
                   <img 
-                    src="/dist/Utkarsh_profile_pic.jpg" 
+                    src="/public/Utkarsh_profile_pic.jpg" 
                     alt="Utkarsh" 
                     className="w-full h-full object-cover object-top scale-110 hover:scale-125 transition-transform duration-500"
                   />
