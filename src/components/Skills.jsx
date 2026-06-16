@@ -36,16 +36,6 @@ const Skills = () => {
       title: 'Dev Tools & Platforms',
       skills: ['Git', 'GitHub', 'Postman', 'Firebase', 'Supabase']
     },
-    // {
-    //   title: 'AI / Machine Learning',
-    //   skills: [
-    //     'Machine Learning',
-    //     'Artificial Intelligence',
-    //     'Pandas',
-    //     'NumPy',
-    //     'Scikit-learn'
-    //   ]
-    // },
     {
       title: 'Development Practices',
       skills: ['Agile Methodology', 'Scrum', 'MVC Architecture']
@@ -53,8 +43,15 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" ref={ref} className="section-padding bg-transparent">
-      <div className="max-w-7xl mx-auto">
+    <section id="skills" ref={ref} className="section-padding bg-transparent relative overflow-hidden">
+      {/* Animated Background Blobs */}
+      <div className="absolute inset-0 overflow-hidden -z-10">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -63,7 +60,7 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-100">
-            Technical <span className="gradient-to-r from-blue-400 to-purple-400 mx-auto">Skills</span>
+            Technical <span className="text-gradient">Skills</span>
           </h2>
           <div className="w-24 h-[2px] bg-gray-700 mx-auto rounded-full" />
         </motion.div>
@@ -75,12 +72,11 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="bg-[#0f0738] border border-gray-800 rounded-2xl p-6 
-                         hover:border-gray-600 hover:scale-[1.02] 
-                         transition-all duration-300"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="glass rounded-2xl p-6 hover:bg-white/15 transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold mb-4 text-gray-200">
+              <h3 className="text-xl font-bold mb-4 text-gradient">
                 {category.title}
               </h3>
 
@@ -88,12 +84,12 @@ const Skills = () => {
                 {category.skills.map((skill) => (
                   <motion.span
                     key={skill}
-                    whileHover={{ scale: 1.06 }}
-                    className="px-4 py-2 rounded-md text-sm 
-                               bg-[#1a1a1a] text-gray-300 
-                               border border-gray-700
-                               hover:text-gray-100 hover:border-gray-500
-                               transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium
+                               glass-dark text-gray-300
+                               hover:text-white hover:border-purple-400/50
+                               hover:shadow-[0_0_15px_rgba(168,85,247,0.4)]
+                               transition-all duration-200"
                   >
                     {skill}
                   </motion.span>
