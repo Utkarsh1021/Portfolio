@@ -88,7 +88,7 @@ const Home = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-400 max-w-2xl"
             >
-              Computer Science and Engineering (3rd year) undergraduate with strong foundations in Full-Stack Web Development, Mobile Application Development and Software Engineering.
+              Computer Science and Engineering (Final year) undergraduate with strong foundations in Full-Stack Web Development, Mobile Application Development and Software Engineering.
             </motion.p>
 
             {/* CTA Buttons */}
