@@ -35,8 +35,8 @@ npm run dev
 
 ## Resume download
 
-- Put your resume PDF in `public/` (example: `public/Tejas.pdf`)
-- The **Download Resume** button links to `/Tejas.pdf`
+- Put your resume PDF in `public/` (example: `public/Utkarsh.pdf`)
+- The **Download Resume** button links to `/Utkarsh.pdf`
 
 ### Build
 
